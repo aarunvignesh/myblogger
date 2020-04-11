@@ -1,0 +1,8 @@
+web:
+  build: .
+  dockerfile: ./Dockerfile
+  restart: always
+  volumes:
+    - "./src:/usr/myblogger/"
+  ports:
+    - "2230:2320"

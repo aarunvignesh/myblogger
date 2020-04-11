@@ -1,0 +1,17 @@
+production: &production
+  environment: "production"
+  db:
+    host: "192.169.1.1"
+
+stage: &stage
+  <<: *production
+  environment: "stage"
+  db:
+    host: "172.169.1.1"
+
+development: &development
+  <<: *stage
+  environment: "development"
+  db:
+    host: "127.0.0.1"
+    port: 27017
