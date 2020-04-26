@@ -1,3 +1,7 @@
 require_relative "app"
 
-run Shivin::App
+Dir.glob('./{controllers}/*.rb').each { |file| require file}
+
+map('/') {run Shivin::IndexController}
+map('/profile') {run Shivin::ProfileController}
+
