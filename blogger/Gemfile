@@ -10,4 +10,10 @@ gem "bundler"
 gem "webrick"
 gem "shotgun"
 gem "sinatra-contrib"
+gem "faraday"
 gem "slim", "~> 4.0"
+
+group :test do
+  gem "minitest"
+  gem "rack-test"
+end

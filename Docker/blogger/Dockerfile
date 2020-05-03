@@ -1,10 +1,12 @@
- FROM andrius/alpine-ruby:latest
+FROM andrius/alpine-ruby:latest
+
+MAINTAINER ARUN VIGNESH A
 
 WORKDIR /usr/myblogger/
 
-COPY ./Gemfile .
+COPY ./blogger/Gemfile .
 
-RUN ls
+COPY ./blogger/Rakefile .
 
 RUN bundle install
 
