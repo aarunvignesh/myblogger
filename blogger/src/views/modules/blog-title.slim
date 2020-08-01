@@ -1,3 +1,9 @@
 .blog-title
-  img src="#{image_link}"
-  h1 #{title}
+  .title-container.col-12
+    h1.col-12.text-center #{title}
+    img.col-12 src="#{image}"
+
+  .author-container.col-12
+    span.name.col-12
+      span #{author_name}
+      span #{date}

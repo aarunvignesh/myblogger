@@ -4,5 +4,6 @@ web:
   restart: always
   volumes:
     - ./blogger/src:/usr/myblogger/
+    - ./blogger/builder:/usr/myblogger/builder
   ports:
     - 2230:2320

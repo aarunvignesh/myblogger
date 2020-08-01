@@ -1,0 +1,33 @@
+- blog["content"].each do |content|
+
+  - case content["module"]
+  - when "sub_heading"
+    h3 #{content["value"]}
+    br
+  - when "inner_sub_heading"
+    h4 #{content["value"]}
+    br
+  - when "break"
+    br
+  - when "quotation"
+    .row
+      .col-12.text-center
+        span.quotation #{content["value"]}
+    br
+  - when "paragraph"
+    .row.p-3
+      p class=((('text-justify' if content["align"] == "justify") || '') +  ((('text-center' if content["align"] == "center")) || '') ) #{{content["value"]}}
+  - when "image"
+    .row
+      img.col-12.offset-0.col-md-8.offset-md-2 src='#{content["value"]}'
+  - when "image_and_text"
+    .row
+      - if content["align_image"] == "left"
+        img.col-12.col-md-6.w-100.h-100.mb-5.mb-md-0  src='#{content["img_src"]}'
+        .col-12.col-md-6.text-justify.d-block #{{content["value"]}}
+      - else
+        .col-12.col-md-6.mb-5.mb-md-0.text-justify.d-block  #{{content["value"]}}
+        img.col-12.col-md-6.w-100.h-100 src='#{content["img_src"]}'
+  - when "space"
+    .row
+      .d-block.p-5

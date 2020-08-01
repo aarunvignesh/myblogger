@@ -4,12 +4,26 @@ require 'sinatra/base'
 
 module Shivin
   class BlogController < App
-    get "/:article" do
 
-      content = contentService.fetch_blog_article(params[:article])
-      if content.success?
-        slim :blogs, {locals: JSON.parse(content.body)}
-      else
+    get "/" do
+      begin
+        content = contentService.fetch_blog_home_page
+        slim :blogs, {locals: content}
+      rescue BlogNotFound => blog
+        redirect "/not-found"
+      end
+    end
+
+    get "/not-found" do
+      slim :notfound
+    end
+
+    get "/blog/:article" do
+      begin
+        content = contentService.fetch_blog_article(params[:article])
+
+        slim :article, {locals: content}
+      rescue BlogNotFound => blog
         redirect "/not-found"
       end
     end

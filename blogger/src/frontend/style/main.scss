@@ -1,0 +1,11 @@
+@import "./bootstrap-scss/bootstrap";
+@import "./screen_size";
+@import "./header";
+@import "./footer";
+@import "./blogs";
+@import "./home";
+@import "./blog_home";
+
+body{
+  padding-top: 100px;
+}

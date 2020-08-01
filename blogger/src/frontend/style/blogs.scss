@@ -1,0 +1,58 @@
+.blog-title {
+  .title-container{
+    position: relative;
+
+    img{
+      width: 100%;
+    }
+
+    h1{
+      padding-bottom: 20px;
+    }
+  }
+
+  .author-container{
+
+    h1{
+      padding-bottom: 50px;
+    }
+
+    .author-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 7px solid #ffe6e6;
+      height: 175px;
+      box-shadow: 9px 0 17px 0;
+    }
+
+    .name{
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      display: block;
+      padding: 20px 0;
+      color: #025d94;
+    }
+
+    .name span:nth-child(1){
+      font-size: 35px;
+      display: block;
+    }
+    .name span:nth-last-child(1){
+      display: block;
+      color: black;
+      font-size: 11px;
+    }
+  }
+
+
+}
+
+span{
+  &.quotation{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: cursive;
+  }
+}

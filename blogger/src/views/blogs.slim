@@ -1,2 +1,18 @@
-p #{body["blog"]["heading"]}
-== render_module("modules/blog-title",{ "title": body["blog"]["heading"], "image_link":"./assets/img/av.png"} )
+.container.blogs-home-page
+    h2.page-title #{page_title}
+    .blog-container
+        - for deckIndex in (0 .. (cards.length/3))
+            div.card-deck
+                - for cardIndex in ((deckIndex*3) .. (deckIndex*3)+2)
+                    - if cards[cardIndex]
+                        div.card
+                            img.card-img-top src="#{cards[cardIndex]['image_src']}" alt=""
+                            div.card-body
+                                h5.card-title #{cards[cardIndex]["title"]}
+                                / p.card-text
+                                p.card-text
+                                    small.text-muted #{cards[cardIndex]["description"]}
+                                p.card-text.text-right
+                                    a.btn.btn-primary href="#{cards[cardIndex]['href']}" #{cards[cardIndex]["readTime"]}&nbsp;read
+                    - else
+                        div.card.empty.d-none.d-sm-flex

@@ -1,0 +1,15 @@
+.blogs-home-page{
+  .page-title{
+    text-align: center;
+  }
+  .blog-container{
+    .card-deck{
+      padding: 25px 0;
+    }
+    .card{
+      &.empty{
+        border: none;
+      }
+    }
+  }
+}

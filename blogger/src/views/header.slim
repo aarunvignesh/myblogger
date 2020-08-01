@@ -1,9 +1,35 @@
-nav.header.navbar
-  a class="navbar-brand brand" href="#"
-    img src="./assets/img/av.svg" width="30" height="30" class="d-inline-block align-top" alt=""
-    | ARUN VIGNESH
-  div.pull-right.header-menu
-    a href="/" About
-    a href="/blogs"  Blogs
-    a href="/events"   Events
-    a href="/contact"   Contact
+nav.header.navbar.fixed-top
+  .container-fluid
+    a class="navbar-brand brand" href="/"
+      img src="/assets/img/av.svg" width="30" height="30" class="d-inline-block align-top" alt=""
+      span ARUN VIGNESH
+    div.float-right.header-menu
+      a href="/about" About
+      a href="/" Blogs
+      a href="/events" Events
+    div.float-right.side-bar-menu
+      a#menu-btn.btn
+        div
+        div
+        div
+  div.collapse-header
+    a href="/about" About
+    a href="/" Blogs
+    a href="/events" Events
+
+javascript:
+  $(document).ready(function () {
+    var isHidden = true;
+    $("#menu-btn").click(function () {
+      if(isHidden){
+          $(".collapse-header").show("slow",{easing:"swing"});
+          $(".side-bar-menu").addClass("close-icon");
+          isHidden = false;
+      }
+      else{
+          $(".collapse-header").hide("slow", {easing: "swing"});
+          $(".side-bar-menu").removeClass("close-icon");
+          isHidden = true;
+      }
+    });
+  });

@@ -1,0 +1,33 @@
+.home-page{
+  .profile-photo-conatiner{
+    img{
+      display: block;
+    }
+  }
+  .profile-description-conatiner{
+    padding: 50px 0;
+    .social-share{
+      div{
+        text-align: center;
+        a{
+          line-height: 30px;
+        }
+      }
+    }
+    .description{
+      padding: 20px;
+      border-top: 1px solid #dee2e6 !important;
+      @include sm-support{
+        border-top: 1px solid #dee2e6 !important;
+      }
+      @include md-support{
+        border-top: none !important;
+        border-left: 1px solid #dee2e6 !important;
+      }
+      .technolgy-logo{
+        height: 2.5em;
+        padding: 5px;
+      }
+    }
+  }
+}

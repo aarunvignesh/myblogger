@@ -1,0 +1,30 @@
+@mixin ipad-support{
+  @media screen and (min-width: 750px){
+    @content;
+  }
+}
+
+@mixin phone-support{
+  @media screen and (min-width: 350px){
+    @content;
+  }
+}
+
+@mixin sm-support{
+  @media screen and (min-width: 575px){
+    @content;
+  }
+}
+
+@mixin md-support{
+  @media screen and (min-width: 768px){
+    @content;
+  }
+}
+
+@mixin lg-support{
+  @media screen and (min-width: 960px){
+    @content;
+  }
+}
+

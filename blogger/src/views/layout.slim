@@ -1,12 +1,20 @@
 html
   head
-    script type="text/javascript" src="./js/lib/jquery.js"
-    script type="text/javascript" src="./js/lib/bootstrap.min.js"
-    script type="text/javascript" src="./js/lib/bootstrap.bundle.min.js"
-    link rel="stylesheet" href="./assets/css/bootstrap.css"
-    link rel="stylesheet" href="./assets/css/style.css"
-    script type="text/javascript" src="./js/index.js"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    script type="text/javascript" src="/js/lib/jquery.js"
+    script type="text/javascript" src="/js/lib/bootstrap.min.js"
+    script type="text/javascript" src="/js/lib/bootstrap.bundle.min.js"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    link rel="stylesheet" href="/assets/css/main.css"
+    script type="text/javascript" src="/js/index.js"
+    script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-97562833-9" async=""
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-97562833-9');
   body
     == slim :header
     ==yield
     == slim :footer
+    script id="dsq-count-scr" src="//arun-tech-blogs.disqus.com/count.js" async

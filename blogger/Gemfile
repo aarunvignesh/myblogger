@@ -11,6 +11,7 @@ gem "webrick"
 gem "shotgun"
 gem "sinatra-contrib"
 gem "faraday"
+gem "rake"
 gem "slim", "~> 4.0"
 
 group :test do

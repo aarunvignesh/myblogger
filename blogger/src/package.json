@@ -1,0 +1,20 @@
+{
+  "name": "blogger-frontend",
+  "version": "1.0.0",
+  "description": "frontend",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "ARUN VIGNESH A",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.1.0"
+  },
+  "dependencies": {
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.9"
+  }
+}
