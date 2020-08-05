@@ -12,6 +12,7 @@ gem "shotgun"
 gem "sinatra-contrib"
 gem "faraday"
 gem "rake"
+gem "xml-sitemap"
 gem "slim", "~> 4.0"
 
 group :test do

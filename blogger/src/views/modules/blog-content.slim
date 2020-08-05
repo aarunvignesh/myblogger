@@ -23,11 +23,11 @@
   - when "image_and_text"
     .row
       - if content["align_image"] == "left"
-        img.col-12.col-md-6.w-100.h-100.mb-5.mb-md-0  src='#{content["img_src"]}'
+        img.col-12.col-md-6.w-100.mb-5.mb-md-0  src='#{content["img_src"]}'
         .col-12.col-md-6.text-justify.d-block #{{content["value"]}}
       - else
         .col-12.col-md-6.mb-5.mb-md-0.text-justify.d-block  #{{content["value"]}}
-        img.col-12.col-md-6.w-100.h-100 src='#{content["img_src"]}'
+        img.col-12.col-md-6.w-100 src='#{content["img_src"]}'
   - when "space"
     .row
       .d-block.p-5
