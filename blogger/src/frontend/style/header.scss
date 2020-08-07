@@ -36,43 +36,12 @@
       color: #efdbdd;
     }
   }
-
   .side-bar-menu{
     display: block;
-
-    a.btn {
-      display: block;
-      height: 50px;
-      div {
-        width: 30px;
-        padding: 3px;
-        margin: 5px;
-        background: white;
-      }
-
-      a.btn:hover {
-        div {
-          background: #f1c8b9;
-        }
-      }
+    .hamburger{
+      background: #f1c8b9;
+      opacity: 1;
     }
-  }
-  .side-bar-menu.close-icon{
-    transition: 0.6s delay;
-    a.btn{
-      margin-left: 15px;
-      margin-top: 5px;
-      div:nth-child(1){
-        transform: rotate(50deg) translate(3px, 7px);
-      }
-      div:nth-child(2){
-        transform: rotate(140deg) translate(0px, 6px);
-      }
-      div:nth-child(3){
-        display: none;
-      }
-    }
-
   }
   @include ipad-support {
     .header-menu{
@@ -82,7 +51,6 @@
       display: none;
     }
   }
-
   .collapse-header{
     display: none;
     width: 100%;
@@ -91,6 +59,8 @@
       margin: auto;
       display: block;
       color: white;
+      line-height: 2em;
+      font-size: 1.2em;
     }
   }
 

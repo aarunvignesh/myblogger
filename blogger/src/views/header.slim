@@ -8,27 +8,30 @@ nav.header.navbar.fixed-top
       a href="/" Blogs
       a href="/about" About
     div.float-right.side-bar-menu
-      a#menu-btn.btn
-        div
-        div
-        div
+      / a#menu-btn.btn
+      /   div
+      /   div
+      /   div
+      .hamburger.hamburger--emphatic
+        .hamburger-box
+          .hamburger-inner
   div.collapse-header
-    a href="/about" About
+    a href="/search" Search
     a href="/" Blogs
-    a href="/events" Events
+    a href="/about" About
 
 javascript:
   $(document).ready(function () {
     var isHidden = true;
-    $("#menu-btn").click(function () {
+    $(".hamburger").click(function () {
       if(isHidden){
           $(".collapse-header").show("slow",{easing:"swing"});
-          $(".side-bar-menu").addClass("close-icon");
+          $(".hamburger").addClass("is-active");
           isHidden = false;
       }
       else{
           $(".collapse-header").hide("slow", {easing: "swing"});
-          $(".side-bar-menu").removeClass("close-icon");
+          $(".hamburger").removeClass("is-active");
           isHidden = true;
       }
     });
