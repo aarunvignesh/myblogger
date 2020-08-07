@@ -11,6 +11,9 @@ def create_sitemap
     # Set the page priority
     m.add '/about', :priority => 0.6, :updated => Date.new(2020,07,30), :period => :weekly
 
+    # Set the page priority
+    m.add '/search', :priority => 0.6, :updated => Date.new(2020,05,30), :period => :monthly
+
   end
 
   # Render the sitemap XML
