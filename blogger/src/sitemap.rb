@@ -7,6 +7,7 @@ def create_sitemap
 
     # You can drop leading slash, it will be automatically added
     m.add '/blog/solid-principles' , :priority => 0.9, :updated => Date.new(2020,07,30), :period => :weekly
+    m.add '/blog/docker' , :priority => 0.9, :updated => Date.new(2020,08,18), :period => :weekly
 
     # Set the page priority
     m.add '/about', :priority => 0.6, :updated => Date.new(2020,07,30), :period => :weekly

@@ -55,4 +55,12 @@ span{
     font-size: 1.5em;
     font-family: cursive;
   }
+  &.code{
+    font-family: monospace;
+    font-size: 1em;
+    background: black;
+    color: yellow;
+    padding: 0.9em;
+    border-radius: 0.5em;
+  }
 }
